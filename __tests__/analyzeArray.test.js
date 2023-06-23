@@ -1,4 +1,4 @@
-const analyzeArray = require("../analyzeArray");
+import analyzeArray from "../src/analyzeArray";
 
 const array = [1, 8, 3, 4, 2, 6];
 const object = {

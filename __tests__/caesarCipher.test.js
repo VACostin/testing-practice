@@ -1,4 +1,4 @@
-const caesarCipher = require("../caesarCipher");
+import caesarCipher from "../src/caesarCipher";
 
 const plainText = "Defend the East Wall of the castlez.";
 const shift = 1;

@@ -1,5 +1,5 @@
 function analyzeArray(array) {
-    this.array = array;
+    console.log(this);
 
     return {
         avg: array.reduce((acc, val) => acc + val, 0)/array.length,
@@ -9,4 +9,4 @@ function analyzeArray(array) {
     }
 }
 
-module.exports = analyzeArray;
+export default analyzeArray;

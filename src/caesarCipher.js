@@ -1,7 +1,6 @@
 function caesarChiper(string, shift){
     const ASCII_DIFF = 26;
-    this.string = string;
-    this.shift = shift % ASCII_DIFF;
+    shift = shift % ASCII_DIFF;
 
     function shiftChar(char) {
         const ASCII_A = 65;
@@ -11,15 +10,15 @@ function caesarChiper(string, shift){
         const charCode = char.charCodeAt(0);
 
         if(ASCII_A <= charCode && charCode <= ASCII_Z)
-            return String.fromCharCode((charCode - ASCII_A + this.shift) % ASCII_DIFF + ASCII_A);
+            return String.fromCharCode((charCode - ASCII_A + shift) % ASCII_DIFF + ASCII_A);
         if(ASCII_a <= charCode && charCode <= ASCII_z)
-            return String.fromCharCode((charCode - ASCII_a + this.shift) % ASCII_DIFF + ASCII_a);
+            return String.fromCharCode((charCode - ASCII_a + shift) % ASCII_DIFF + ASCII_a);
         return char;
     }
 
-    return [...this.string].map(char => shiftChar(char)).join("");
+    return [...string].map(char => shiftChar(char)).join("");
     
 }
 
 
-module.exports = caesarChiper;
+export default caesarChiper;

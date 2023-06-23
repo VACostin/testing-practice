@@ -1,4 +1,4 @@
-const calculator = require("../calculator");
+import calculator from "../src/calculator";
 
 const val1 = 2
 const val2 = 2
